@@ -16,7 +16,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.get('test', (req, res) => {
+app.get('/test', (req, res) => {
     res.json({status:200, message: 'API REST FUNCIONANDO CORRECTAMENTE'})
 })
 
