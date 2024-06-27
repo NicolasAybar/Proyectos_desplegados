@@ -16,6 +16,10 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+app.get('test', (req, res) => {
+    res.json({status:200, message: 'API REST FUNCIONANDO CORRECTAMENTE'})
+})
+
 app.use('/api/auth', authRouter)
 app.use('/api/product', productRouter)
 app.use('/api/carts', cartsRouter)
